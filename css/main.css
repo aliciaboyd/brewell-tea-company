@@ -1,15 +1,22 @@
-/* FONTS */
+/* IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url(utlity.css);
+@import url(nav.css);
+
 
 /* GENERAL STYLES */
 
-:root {
-  --text-lt: #ECE9DA;
-  --beige: #F2E4CE;
-  --white: #FFFFFF;
-  --text-dark: #1E1E1E;
-  --lt-green: #778536;
-  --mid-green: #32421E;
-  --dark-green: #192509;
-  --dark-red: #37110C;
+body {
+  overflow-x: hidden;
+}
+
+.resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--mid-green);
 }
