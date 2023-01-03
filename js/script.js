@@ -1,8 +1,8 @@
 const menuButton = document.querySelector('.menu-toggle');
+const fixedNav = document.querySelector('.main-nav');
 const mobileNavHeader = document.querySelector('.mobile-nav-header');
 const mobileNavLinks = document.querySelector('.nav-links');
 const mobileNavLogo = document.querySelector(".logo img");
-let navOpenStatus;
 
 function resetNav() {
   menuButton.innerHTML = "Menu";
@@ -10,7 +10,6 @@ function resetNav() {
   mobileNavLinks.classList.remove('active');
   menuButton.classList.remove('active');
   mobileNavLogo.src = "img/logos/brewell-logo-lt.svg";
-  navOpenStatus = false;
 };
 
 function showHideNav() {
@@ -20,7 +19,6 @@ function showHideNav() {
     mobileNavLinks.classList.toggle('active');
     menuButton.classList.toggle('active');
     mobileNavLogo.src = "img/logos/brewell-logo-dark.svg";
-    navOpenStatus = true;
   } else {
     resetNav();
   };
@@ -33,3 +31,12 @@ window.addEventListener('resize', () => {
 });
 
 menuButton.addEventListener('click', showHideNav);
+
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > (window.innerHeight / 2)){
+    fixedNav.classList.add('nav-scroll-bg')
+  } else {
+    fixedNav.classList.remove('nav-scroll-bg')
+  }
+});
