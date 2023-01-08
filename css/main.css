@@ -21,7 +21,7 @@ h1 {
  font-size: 4rem;
  font-weight: 400;
  letter-spacing: -.5px;
- line-height: 1;
+ line-height: .9;
  text-align: center;
 }
 
@@ -29,7 +29,7 @@ h2 {
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: -.5px;
-  line-height: 1;
+  line-height: .9;
   color: var(--dark-green);
   margin-bottom: 1.5rem;
 }
@@ -41,6 +41,18 @@ h3 {
   line-height: 1;
   color: var(--beige);
   margin-bottom: 1.5rem;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: 1px;
+  color: var(--beige);
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
 }
 
 .btn-light, .btn-dark {
@@ -72,17 +84,30 @@ h3 {
 
 }
 
+.red-bg {
+  background-color: var(--dark-red);
+}
+
+.green-bg {
+  background-color: var(--dark-green);
+}
+
 .btn-dark:hover {
   background-color: var(--beige-transparent);
   color: var(--lt-green)
 }
+
+.border-right-dark {
+  border-right: 1px solid var(--dark-green);
+}
+
 
 /* NAVIGATION */
 
 .main-nav {
   position: fixed;
   width: 100%;
-  max-width: 1800px;
+  /* max-width: 1800px; */
   left: 50%;
   transform: translateX(-50%);
   margin: auto;
@@ -97,6 +122,8 @@ h3 {
   padding-inline: 2rem;
   display: flex;
   width: 100%;
+  max-width: 1800px;
+  /* margin-inline:auto; */
   justify-content: space-between;
   align-items: center;
   height: 4rem;
@@ -284,7 +311,7 @@ h3 {
 }
 
 .grid-text {
-  padding: 2rem;
+  padding: 4rem 2rem;
   height: 100%;
   width: 100%;
   min-height: 400px;
@@ -295,7 +322,9 @@ h3 {
 }
 
 .grid-text p {
+  display: inline-block;
   margin-block: 1rem;
+  font-size: 1rem;
 }
 
 .grid-full-image {
@@ -324,9 +353,14 @@ h3 {
 }
 
 .full-width-section h3 {
-  margin-bottom: 3rem;
+  text-align: center;
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
 }
+
 .full-width-section div {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,18 +369,200 @@ h3 {
 }
 
 .full-width-section div img {
-  max-height: 1.5rem;
+  max-height: 2rem;
+  margin-top: 1rem;
+
 }
 
-.red-bg {
-  background-color: var(--dark-red);
+.grid-twocol {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding-block: 120px;
+  padding-inline: 2rem;
+  max-width: 1440px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.grid-twocol h3 {
+  font-size: 2.5rem;
+  color: var(--dark-green);
+}
+
+.grid-twocol h3 ~ p {
+  max-width: 80ch;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--lt-green);
+}
+
+.grid-twocol .img-4 {
+  height: 400px;
+  border: 1px solid var(--dark-green);
+}
+
+.section-contact-info {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.img-1 {
+  background-image: url(../img/brewell-floating-pouches.jpg);
+}
+.img-2 {
+  background-image: url(../img/tea-bags.jpg);
+}
+.img-3 {
+  background-image: url(../img/pexels-anna-pou-8330273.jpg);
+}
+.img-4 {
+  background-image: url(../img/pexels-ivan-samkov-8951882.jpg);
+}
+
+.img-1, .img-2, .img-3, .img-4 {
+  background-position: center;
+  background-size: cover;
 }
 
 /* SECTIONS END */
 
-.border-right-dark {
-  border-right: 1px solid var(--dark-green);
+/* FOOTER */
+
+.main-footer {
+  background-color: var(--dark-grey);
+  padding-block: 4rem;
+  font-size: .9rem;
 }
+
+.main-footer .footer-grid-3 {
+  padding-inline: 2rem;
+  color: var(--white);
+  display: grid;
+  grid-template-areas: 
+  'logo logo'
+  'email email'
+  'contact wholesale'
+  ;
+  gap: 2rem;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.main-footer .footer-grid-3 > a {
+  grid-area: logo;
+}
+
+.main-footer .footer-grid-3 .email-field {
+  grid-area: email;
+}
+
+.main-footer .footer-grid-3 .footer-contact-info {
+  grid-area: contact;
+}
+
+.main-footer .footer-grid-3 .footer-wholesale-info {
+  grid-area: wholesale;
+}
+
+.main-footer h4, .main-footer p {
+  margin-block: 1rem .5rem;
+}
+
+
+.email-field input[type="email"] {
+  width: 75%;
+  position:relative;
+  background-color: transparent;
+  height: 3rem;
+  border: 1px solid var(--white);
+  padding-inline: .5rem;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.email-field label {
+  position: absolute;
+}
+
+.email-field button {
+  height: 3rem;
+  width: 20%;
+  padding-inline: 1rem;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+}
+
+.email-field button:hover {
+  cursor: pointer;
+  background-color: var(--beige-transparent);
+  transition: 300ms ease;
+}
+
+.footer-contact-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-links {
+  padding-inline: 2rem;
+  margin-block: 3rem 1rem;
+}
+
+.footer-nav-links a, .footer-social-links a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .9rem;
+}
+
+.footer-nav-links a {
+  margin-right: 1rem;
+}
+
+.footer-social-links a {
+  margin-left: 1rem;
+}
+
+.footer-nav-links a:hover, .footer-social-links a:hover {
+  color: var(--beige);
+  transition: 150ms ease-in-out;
+}
+
+.footer-nav-links, .footer-social-links {
+  display: inline-block;
+  list-style: none;
+}
+
+.footer-nav-links li, .footer-social-links li {
+  display: inline-block;
+}
+
+.copy {
+  margin-inline: 2rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--white);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 80%;
+
+}
+
+/* FOOTER END */
 
 @media (min-width: 768px) {
 
@@ -358,10 +574,9 @@ h3 {
    }
 
    h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 400;
     letter-spacing: -.5px;
-    line-height: 1;
     margin-bottom: 2rem;
   }
   
@@ -502,23 +717,24 @@ h3 {
     max-width: 500px;
   }
 
+
+  .grid-text p {
+    margin-block: 1rem;
+    font-size: 1.25rem;
+  }
+
   .grid-full-image {
     width: 100%;
-    height: 100%;
+    height: 800px;
     overflow: hidden;
     display: grid;
     justify-content: center;
     align-items: center;
     border-bottom: none;
   }
-
-  .grid-full-image img {
-    height: auto;
-    width: auto;
-  }
   
   .full-width-section h3 {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .full-width-section div {
@@ -528,9 +744,50 @@ h3 {
     text-align: center;
   }
 
+  .grid-twocol {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-footer .footer-grid-3 {
+    padding-inline: 2rem;
+    color: var(--white);
+    display: grid;
+    grid-template-areas: 
+    'logo logo logo'
+    'email contact wholesale'
+    ;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .email-field input[type="email"] {
+    width: 60%;
+  }
+
+  .email-field button {
+    width: auto;
+  }
+
+  .copy {
+    flex-direction: row;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 940px) {
+  .section-contact-info {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .footer-contact-info div {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    
+  }
 }
 
 @media (min-width: 1440px) {

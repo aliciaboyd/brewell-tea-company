@@ -9,6 +9,7 @@
   --dark-green: #192509;
   /* --dark-green: #090d03; */
   --dark-red: #37110C;
+  --dark-grey: #1E1E1E;
 }
 
 /* UTLITY STYLES */
@@ -20,6 +21,10 @@
   font-family: 'Jost', Arial, sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: 'Cormorant Garamond', Times, serif;
+}
+
+h4 {
+  font-family: 'Jost', Arial, sans-serif;
 }
