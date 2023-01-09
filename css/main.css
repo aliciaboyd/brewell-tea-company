@@ -39,7 +39,6 @@ h3 {
   font-weight: 400;
   letter-spacing: -.5px;
   line-height: 1;
-  color: var(--beige);
   margin-bottom: 1.5rem;
 }
 
@@ -92,6 +91,10 @@ h4 {
   background-color: var(--dark-green);
 }
 
+.lt-bg {
+  background-color: var(--beige);
+}
+
 .btn-dark:hover {
   background-color: var(--beige-transparent);
   color: var(--lt-green)
@@ -115,6 +118,7 @@ h4 {
   align-items: center;
   justify-content: space-between;
   transition: 300ms ease-in;
+  z-index: 1;
 
 }
 
@@ -127,7 +131,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-scroll-bg {
@@ -302,6 +306,41 @@ h4 {
 
 /* HERO END */
 
+/* HERO SUBPAGE */
+
+.hero-subpage {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark-green);
+  padding-block: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-subpage h1 {
+  color: beige;
+  margin-bottom: 2rem;
+}
+
+.hero-subpage header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 2rem;
+}
+
+.header-side-image {
+  width: 100%;
+  position: relative;
+  transform: 0;
+}
+
+
+/* HERO SUBPAGE END */
+
 /* SECTIONS */
 
 .grid-section {
@@ -371,7 +410,40 @@ h4 {
 .full-width-section div img {
   max-height: 2rem;
   margin-top: 1rem;
+}
 
+.varieties {
+  max-width: 1440px;
+  padding: 2em;
+  text-align: center;
+  margin: auto;
+}
+
+.tea-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-block: 2rem 6.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+}
+
+.card h4 {
+  font-family: 'Cormorant Garamond', Times, serif;
+  text-transform:initial;
+  letter-spacing: 0;
+  color: var(--dark-green);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
 }
 
 .grid-twocol {
@@ -409,6 +481,37 @@ h4 {
   gap: 2rem;
 }
 
+.grid-threecol {
+  display: grid;
+  height: 600px;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: var(--dark-green);
+  text-align: center;
+}
+.threecol-text {
+  padding-inline: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 550px;
+  margin: auto;
+}
+
+.threecol-text p {
+  margin-bottom: 1rem;
+}
+
+.grid-threecol h2 {
+  color: var(--beige);
+}
+
+
+.grid-threecol p {
+  color: var(--white);
+}
+
 .img-1 {
   background-image: url(../img/brewell-floating-pouches.jpg);
 }
@@ -422,9 +525,27 @@ h4 {
   background-image: url(../img/pexels-ivan-samkov-8951882.jpg);
 }
 
-.img-1, .img-2, .img-3, .img-4 {
+.img-5 {
+  background-image: url(../img/pexels-eva-bronzini-6087602.jpg);
+}
+
+.img-6 {
+  background-image: url(../img/aniketh-kanukurthi-Qaor6nxikUM-unsplash.jpg);
+}
+
+
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6 {
   background-position: center;
   background-size: cover;
+}
+
+.fu
+.full-width-section h3 {
+  margin-bottom: 2rem;
+}
+
+.full-width-section.red-bg h3, .full-width-section.green-bg h3 {
+  color: var(--beige);
 }
 
 /* SECTIONS END */
@@ -732,16 +853,17 @@ h4 {
     align-items: center;
     border-bottom: none;
   }
-  
-  .full-width-section h3 {
-    margin-bottom: 2rem;
-  }
 
   .full-width-section div {
     flex-direction: row;
     justify-content: center;
     gap: 6rem;
     text-align: center;
+  }
+
+  .full-width-section a:hover {
+    opacity: 50%;
+    transition: 150ms ease-in-out; 
   }
 
   .grid-twocol {
@@ -771,6 +893,53 @@ h4 {
 
   .copy {
     flex-direction: row;
+  }
+
+  .hero-subpage {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: var(--dark-green);
+    padding-top: 4rem;
+    text-align: left;
+  }
+
+  .hero-subpage h1 {
+    color: beige;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-subpage header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: left;
+    max-width: 1440px;
+    padding-left: 2rem;
+    margin:auto;
+  }
+
+  .header-side-image {
+    width: 100%;
+    scale: 200%;
+    position: relative;
+    transform: translateX(5vw);
+    /* align-items: left; */
+    /* height: clamp(300px, 30vw, 900px) */
+  }
+
+  .varieties {
+    padding: 6.25rem;
+  }
+  
+  .tea-types {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-threecol {
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
