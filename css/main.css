@@ -12,11 +12,6 @@ body {
   background-color: var(--beige);
 }
 
-.resize-animation-stopper * {
-  transition: none !important;
-  animation: none !important;
-}
-
 h1 {
  font-size: 4rem;
  font-weight: 400;
@@ -117,7 +112,6 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: 300ms ease-in;
   z-index: 1;
 
 }
@@ -153,7 +147,6 @@ h4 {
   display: block;
   width: 100vw;
   text-decoration: none;
-  transition: 150ms ease;
 }
 
 .main-nav ul li {
@@ -167,6 +160,7 @@ h4 {
 .main-nav ul li a:hover {
   color: var(--lt-green);
   background-color: #e0cfb4;
+  transition: 150ms ease;
 }
 
 .logo {
@@ -183,7 +177,6 @@ h4 {
   width: 100vw;
   flex-direction: column;
   justify-content: space-between;
-  /* transition: 300ms ease; */
   opacity: 0;
   display: none;
 }
@@ -218,18 +211,21 @@ h4 {
   background-color: transparent;
   cursor: pointer;
   font-size: .8rem;
-  transition: 200ms ease;
   height: 2.5rem;
 }
 
 .menu-toggle:hover {
   background-color: var(--beige-transparent);
-  color: var(--beige)
+  color: var(--beige);
+  transition: 200ms ease;
+
 }
 
 .menu-toggle.active {
   border: 1px solid var(--dark-green) !important;
   color: var(--dark-green) !important;
+  transition: 200ms ease;
+
 }
 
 .active {
@@ -469,7 +465,7 @@ h4 {
   border-bottom: 1px solid var(--lt-green);
 }
 
-.grid-twocol .img-4 {
+.grid-twocol .img-4, .grid-twocol .img-3, .grid-twocol .img-5  {
   height: 400px;
   border: 1px solid var(--dark-green);
 }
@@ -904,6 +900,20 @@ h4 {
     align-items: left;
     background-color: var(--dark-green);
     padding-top: 4rem;
+    text-align: left;
+  }
+
+  .hero-subpage-about {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-image: url(../img/header-about.jpg);
+    background-position: center;
+    background-size: 90%;
+    padding-top: 8rem;
     text-align: left;
   }
 
